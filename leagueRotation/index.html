@@ -5,25 +5,21 @@
     <title>League Rotation</title>
 
     <script src="./script.js"></script>
-    <script src="https://momentjs.com/downloads/moment.js"></script>
     <link rel="stylesheet" href="../style.css"></link>
 </head>
 
-<body>
+<body onload="onLoad()" class="leagueBackgroundImg">
     <div class="pageContainer">
         <div>
             <h1 id="header" class="header">League Rotation</h1>
         </div>
 
-        <div>
-            <button onclick="selectChampion(1)">Aatrox</button>
-            <button onclick="selectChampion(2)">Ahri</button>
-        </div>
+        <div id="btnListContainer"></div>
 
-        <div class="listContainer">
-            <div>Name: <a id="name"></a></div>
-            <div>Date Last on Rotation: <a id="dateLastOnRotation"></a></div>
-            <div>Date Next on Rotation: <a id="dateNextOnRotation"></a></div>
+        <div id="dataListContainer" class="dataListContainer hide">
+            <div id="name" class="dataListItem"></div>
+            <div id="dateLastOnRotation" class="dataListItem"></div>
+            <div id="dateNextOnRotation" class="dataListItem"></div>
         </div>
     </div>
 </body>
