@@ -1,279 +1,4 @@
-const gameVersion = "10.4.1"
-
-const iconUrl = `https://ddragon.leagueoflegends.com/cdn/${gameVersion}/img/champion`
-
-const champions = [
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 1,
-      name: "Aatrox",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 2,
-      name: "Ahri",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 3,
-      name: "Akali",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 4,
-      name: "Alistar",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 5,
-      name: "Amumu",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 6,
-      name: "Anivia",
-      dateLastOnRotation: "2020-10-04",
-    },
-    {
-      id: 7,
-      name: "Annie",
-      dateLastOnRotation: "2020-12-10",
-    },
-    {
-      id: 8,
-      name: "Aphelios",
-      dateLastOnRotation: "2020-10-12",
-    },
-    {
-      id: 9,
-      name: "Ashe",
-      dateLastOnRotation: "2020-10-04",
-    },
-]
+let previouslySelectedChampion = {};
 
 const mostRecentDate = new Date(Math.max.apply(null, champions.map(champion => {
   return new Date(champion.dateLastOnRotation);
@@ -290,16 +15,43 @@ selectChampion = (selectedId) => {
 }
 
 showData = (selectedChampion) => {
-  document.getElementById('dataListContainer').classList.remove('hide');
+  if (previouslySelectedChampion.name != selectedChampion.name) {
+    console.log(previouslySelectedChampion);
 
-  document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
-  document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + selectedChampion.dateLastOnRotation;
-  document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + selectedChampion.dateNextOnRotation;
+    document.getElementById('dataListContainer').classList.remove('hide');
+  
+    document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
+    document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + selectedChampion.dateLastOnRotation;
+    // Hidden until calculation is implemented
+    //document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + selectedChampion.dateNextOnRotation;
+  
+    document.getElementById(selectedChampion.name).classList.add('championBtnSelected');
+
+    const test2 = document.getElementById(previouslySelectedChampion.name);
+    console.log(test2);
+    //test2.classList.remove('championBtnSelected');
+    
+    previouslySelectedChampion = selectedChampion;
+  } else if (previouslySelectedChampion.name === selectedChampion.name) {
+    document.getElementById('dataListContainer').classList.toggle('hide');
+  
+    document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
+    document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + selectedChampion.dateLastOnRotation;
+    // Hidden until calculation is implemented
+    //document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + selectedChampion.dateNextOnRotation;
+  
+    document.getElementById(selectedChampion.name).classList.toggle('championBtnSelected');
+
+    previouslySelectedChampion = selectedChampion;
+  }
+  else {
+    console.log('k');
+  }
 }
 
 const mapTest = champions.map(champion => (
-`<div class="championBtn" onclick="selectChampion(${champion.id})">
-  <img src="${iconUrl}/${champion.name}.png"/></img>
+`<div id="${champion.name}" class="championBtn" onclick="selectChampion(\`${champion.id}\`)">
+  <img src="${mainIconUrl}/${champion.name}.png"/></img>
   <div>${champion.name}</div>
 </div>`
 ));

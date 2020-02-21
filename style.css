@@ -66,13 +66,23 @@ body {
     margin: 8px;
 }
 
-.championBtn  {
+.championBtn {
     width: 120px;
     height: 170px;
     min-width: 120px;
     font-family: leagueFont;
     font-size: 20px;
     color: white;
+    cursor: pointer;
+}
+
+.championBtn:hover {
+    transform: scale(0.9);
+}
+
+.championBtnSelected {
+    transform: scale(0.9);
+    color: rgb(203,155,57);
 }
 
 .dataListContainer {
