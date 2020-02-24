@@ -86,9 +86,6 @@ body {
 }
 
 .dataListContainer {
-    font-size: 32px;
-    font-family: leagueFont;
-    color: rgb(203,155,57);
     background-color: rgb(0,0,0,0.4);
     width: 550px;
     min-height: 125px;

@@ -4,47 +4,47 @@ const mainIconUrl = `https://ddragon.leagueoflegends.com/cdn/${gameVersion}/img/
 
 const champions = [
     {
-      id: "aatrox",
+      id: "Aatrox",
       name: "Aatrox",
       dateLastOnRotation: "2020-12-10",
     },
     {
-      id: "ahri",
+      id: "Ahri",
       name: "Ahri",
       dateLastOnRotation: "2020-10-12",
     },
     {
-      id: "akali",
+      id: "Akali",
       name: "Akali",
       dateLastOnRotation: "2020-10-04",
     },
     {
-      id: "alistar",
+      id: "Alistar",
       name: "Alistar",
       dateLastOnRotation: "2020-12-10",
     },
     {
-      id: "amumu",
+      id: "Amumu",
       name: "Amumu",
       dateLastOnRotation: "2020-10-12",
     },
     {
-      id: "anivia",
+      id: "Anivia",
       name: "Anivia",
       dateLastOnRotation: "2020-10-04",
     },
     {
-      id: "annie",
+      id: "Annie",
       name: "Annie",
       dateLastOnRotation: "2020-12-10",
     },
     {
-      id: "aphelios",
+      id: "Aphelios",
       name: "Aphelios",
       dateLastOnRotation: "2020-10-12",
     },
     {
-      id: "ashe",
+      id: "Ashe",
       name: "Ashe",
       dateLastOnRotation: "2020-10-04",
     },
