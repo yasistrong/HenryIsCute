@@ -1,14 +1,5 @@
 let previouslySelectedChampion = {};
 
-const mostRecentDate = new Date(Math.max.apply(null, champions.map(champion => {
-  return new Date(champion.dateLastOnRotation);
-})));
-
-const mostRecentObject = champions.filter(champion => {
-  const d = new Date(champion.dateLastOnRotation);
-  return d.getTime() == mostRecentDate.getTime();
-})[0];
-
 selectChampion = (selectedId) => {
   const selectedChampion = champions.find(champion => champion.id === selectedId);
   showData(selectedChampion);
@@ -18,31 +9,43 @@ showData = (selectedChampion) => {
   if (previouslySelectedChampion.name === selectedChampion.name) {
     document.getElementById('dataListContainer').classList.toggle('hide');
   
-    document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
-    document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + selectedChampion.dateLastOnRotation;
-    // Hidden until calculation is implemented
-    //document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + selectedChampion.dateNextOnRotation;
-  
+    showDataItems(selectedChampion);
+
     document.getElementById(selectedChampion.name).classList.toggle('championBtnSelected');
     
     previouslySelectedChampion = selectedChampion;
-  } else if (previouslySelectedChampion.name !== selectedChampion.name) {
-    console.log(previouslySelectedChampion);
-
+  } 
+  else {
     document.getElementById('dataListContainer').classList.remove('hide');
-
-    document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
-    document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + selectedChampion.dateLastOnRotation;
-    // Hidden until calculation is implemented
-    //document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + selectedChampion.dateNextOnRotation;
+  
+    showDataItems(selectedChampion);
 
     document.getElementById(selectedChampion.name).classList.toggle('championBtnSelected');
 
-    // BROKEN
-    //document.getElementById(previouslySelectedChampion.name).classList.toggle('championBtnSelected');
+    if (previouslySelectedChampion.name) {
+      document.getElementById(previouslySelectedChampion.name).classList.remove('championBtnSelected');
+    }
 
     previouslySelectedChampion = selectedChampion;
   }
+}
+
+showDataItems = (selectedChampion) => {
+  document.getElementById('name').innerHTML = 'Name: ' + selectedChampion.name;
+  document.getElementById('dateLastOnRotation').innerHTML = 'Date Last on Rotation: ' + formatDate(selectedChampion.dateLastOnRotation);
+  document.getElementById('dateNextOnRotation').innerHTML = 'Date Next on Rotation: ' + nextOnRotationDate(selectedChampion.dateLastOnRotation);
+}
+
+nextOnRotationDate = (dateLastOnRotation) => {
+  const formattedLastDate = new Date(dateLastOnRotation);
+  const nextDate = formattedLastDate.setDate(formattedLastDate.getDate()+70);
+  const formattedNextDate = new Date(nextDate);
+  return formattedNextDate.toDateString();
+}
+
+formatDate = (date) => {
+  formattedDate = new Date(date);
+  return formattedDate.toDateString();
 }
 
 const mapTest = champions.map(champion => (
